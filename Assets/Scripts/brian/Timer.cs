@@ -17,6 +17,8 @@ public class Timer : MonoBehaviour
 
     public int _shots;
 
+    public GameObject _vicrory;
+    public TextMeshProUGUI _speed, _ammo;
     private void Update()
     {
         if (_running)
@@ -38,9 +40,9 @@ public class Timer : MonoBehaviour
         if (!_running)
         {
             float _lastTime = PlayerPrefs.GetFloat("BackTime");
-            int _lastAmmo = PlayerPrefs.GetInt("Shots");
+            int _lastAmmo = PlayerPrefs.GetInt("BackShots");
 
-            if (_lastTime > _backTime)
+            if (_lastTime > _backTime || _lastTime == 0)
             {
                 PlayerPrefs.SetFloat("BackTime", _backTime);
                 PlayerPrefs.SetString("Time", _min.ToString() + "." + _sec.ToString() + "." + _msec.ToString());
@@ -49,17 +51,26 @@ public class Timer : MonoBehaviour
                 //Debug.Log(PlayerPrefs.GetFloat("BackTime"));
             }
 
-            if (_lastAmmo > _shots)
+            if (_lastAmmo > _shots || _lastAmmo == 0)
             {
-                PlayerPrefs.SetInt("Shots", _shots);
+                PlayerPrefs.SetInt("BackShots", _shots);
+                PlayerPrefs.SetString("Shots", _shots.ToString());
 
                 //Debug.Log(PlayerPrefs.GetInt("Shots"));
             }
 
             enabled = false;
 
+            //victory
+            _vicrory.SetActive(true);
 
-            SceneManager.LoadScene(0);
+            GameObject.Find("Keep").GetComponent<mouseLock>().LockSwitch();
+            GameObject.Find("Keep").GetComponent<Timer>().enabled = false;
+            GameObject.Find("Player").GetComponent<Movement>().enabled = false;
+            GameObject.Find("Player").GetComponentInChildren<Shoot>().enabled = false;
+
+            _speed.text = _min.ToString() + "." + _sec.ToString() + "." + _msec.ToString();
+            _ammo.text = _shots.ToString();
         }
     }
 }

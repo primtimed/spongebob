@@ -55,4 +55,13 @@ public class UI : MonoBehaviour
         Debug.Log("exit");
         Application.Quit();
     }
+
+    public void StatsReste()
+    {
+        PlayerPrefs.SetFloat("BackTime", 0);
+        PlayerPrefs.SetString("Time", null);
+
+        PlayerPrefs.SetInt("BackShots", 0);
+        PlayerPrefs.SetString("Shots", null);
+    }
 }

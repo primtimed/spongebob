@@ -7,9 +7,9 @@ public class Score : MonoBehaviour
 {
     public TextMeshProUGUI _topTimed, _topShots;
 
-    private void Start()
+    public void OnEnable()
     {
         _topTimed.text = PlayerPrefs.GetString("Time");
-        _topShots.text = PlayerPrefs.GetInt("Shots").ToString();
+        _topShots.text = PlayerPrefs.GetString("Shots");
     }
 }
