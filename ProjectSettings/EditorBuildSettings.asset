@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: a89674a7b75d59b49bb7b21db1d66785
   - enabled: 1
-    path: Assets/Scenes/BrianTestScene.unity
+    path: Assets/Scenes/Wave.unity
     guid: fe706d5f65771eb4b805be62675a1111
+  - enabled: 1
+    path: Assets/Scenes/OneShot.unity
+    guid: 7c8f21c3cb28ffd40a007a181e9a13e5
   m_configObjects: {}

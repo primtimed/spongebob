@@ -36,6 +36,8 @@ public class BaseGun : MonoBehaviour
     public GameObject _ShootTrail;
 
     private Timer _timer;
+
+    private GameMode _gameMode;
     private void Awake()
     {
         extra = new Extra();
@@ -44,11 +46,15 @@ public class BaseGun : MonoBehaviour
 
         _timer = GameObject.Find("Keep").GetComponent<Timer>();
         extra.ammoText = GameObject.Find("Ammo").GetComponent<TextMeshProUGUI>();
-        extra.ammoText.text = ammoCount.ToString() + "/" + extra.startAmmo;
-
         extra.cam = GameObject.Find("Camera");
+        _gameMode = GameObject.Find("Keep").GetComponent<GameMode>();
 
         extra.startAmmo = ammoCount;
+    }
+
+    private void Start()
+    {
+        extra.ammoText.text = ammoCount.ToString() + "/" + extra.startAmmo;
     }
 
     private void Update()
@@ -114,6 +120,11 @@ public class BaseGun : MonoBehaviour
     public virtual async void Reload()
     {
         //extra.reloadSound.Play();
+
+        if(_gameMode._mode == GameMode.Mode.OneShot)
+        {
+            GameObject.Find("Keep").GetComponent<UI>().TimeOver();
+        }
 
         extra.reload = true;
         await Task.Delay((int) reloadTime);

@@ -64,15 +64,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Sprint"",
-                    ""type"": ""Button"",
-                    ""id"": ""a658003f-1ca2-4087-bfe2-28d26ed45660"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Shoot"",
                     ""type"": ""Button"",
                     ""id"": ""2658aaab-ac71-472d-9a21-21a44a725fc8"",
@@ -158,28 +149,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fe975137-980f-4922-91d1-3b10e688d45d"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b7587a9c-11c2-4d49-a477-b41c7443278e"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""80f96fe2-e217-488f-bb81-fedfe7d40fd4"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -197,50 +166,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Mouse Lock"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cf365fc6-6c7e-4c9d-b795-be48143ad80d"",
-                    ""path"": ""<Gamepad>/select"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mouse Lock"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6e35d0f1-17f9-41f9-bb1a-7e93ee8f36fa"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Sprint"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9d6a65d2-7164-493d-ab0e-6cb6c5eb49e5"",
-                    ""path"": ""<Gamepad>/leftStickPress"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Sprint"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6930afe9-2c78-441f-8c05-9567581afb0b"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -289,6 +214,94 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Commands"",
+            ""id"": ""993879c3-ecca-4683-9cbc-70fc8d8e309e"",
+            ""actions"": [
+                {
+                    ""name"": ""TimeSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1b225aa-e0c9-430e-ac94-afd759e63afa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkipWave"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1b49f1f-4084-4394-8f8e-4e4a3f18efad"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Damage"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ed09bb2-160d-492c-b2cd-3fdf57cdaebe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimBot"",
+                    ""type"": ""Button"",
+                    ""id"": ""bdfb3297-919b-4ceb-89ce-c8f94768b7ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""47b42c65-20c1-4d5b-9f7a-8e5d7b5333bd"",
+                    ""path"": ""<Keyboard>/f10"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TimeSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb155c5c-fa68-4173-837b-cfe2ac92623a"",
+                    ""path"": ""<Keyboard>/f11"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipWave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""653a9a1b-835e-42bd-8a03-e5d57c13667a"",
+                    ""path"": ""<Keyboard>/f12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Damage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a034ecac-cd66-44d9-b2bc-196ea16e00e5"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimBot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -299,10 +312,15 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         m_DeafultMovement_Rotation = m_DeafultMovement.FindAction("Rotation", throwIfNotFound: true);
         m_DeafultMovement_Jump = m_DeafultMovement.FindAction("Jump", throwIfNotFound: true);
         m_DeafultMovement_MouseLock = m_DeafultMovement.FindAction("Mouse Lock", throwIfNotFound: true);
-        m_DeafultMovement_Sprint = m_DeafultMovement.FindAction("Sprint", throwIfNotFound: true);
         m_DeafultMovement_Shoot = m_DeafultMovement.FindAction("Shoot", throwIfNotFound: true);
         m_DeafultMovement_Reload = m_DeafultMovement.FindAction("Reload", throwIfNotFound: true);
         m_DeafultMovement_Esc = m_DeafultMovement.FindAction("Esc", throwIfNotFound: true);
+        // Commands
+        m_Commands = asset.FindActionMap("Commands", throwIfNotFound: true);
+        m_Commands_TimeSwitch = m_Commands.FindAction("TimeSwitch", throwIfNotFound: true);
+        m_Commands_SkipWave = m_Commands.FindAction("SkipWave", throwIfNotFound: true);
+        m_Commands_Damage = m_Commands.FindAction("Damage", throwIfNotFound: true);
+        m_Commands_AimBot = m_Commands.FindAction("AimBot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -366,7 +384,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
     private readonly InputAction m_DeafultMovement_Rotation;
     private readonly InputAction m_DeafultMovement_Jump;
     private readonly InputAction m_DeafultMovement_MouseLock;
-    private readonly InputAction m_DeafultMovement_Sprint;
     private readonly InputAction m_DeafultMovement_Shoot;
     private readonly InputAction m_DeafultMovement_Reload;
     private readonly InputAction m_DeafultMovement_Esc;
@@ -378,7 +395,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         public InputAction @Rotation => m_Wrapper.m_DeafultMovement_Rotation;
         public InputAction @Jump => m_Wrapper.m_DeafultMovement_Jump;
         public InputAction @MouseLock => m_Wrapper.m_DeafultMovement_MouseLock;
-        public InputAction @Sprint => m_Wrapper.m_DeafultMovement_Sprint;
         public InputAction @Shoot => m_Wrapper.m_DeafultMovement_Shoot;
         public InputAction @Reload => m_Wrapper.m_DeafultMovement_Reload;
         public InputAction @Esc => m_Wrapper.m_DeafultMovement_Esc;
@@ -403,9 +419,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 @MouseLock.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnMouseLock;
                 @MouseLock.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnMouseLock;
                 @MouseLock.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnMouseLock;
-                @Sprint.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnSprint;
-                @Sprint.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnSprint;
-                @Sprint.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnSprint;
                 @Shoot.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnShoot;
@@ -431,9 +444,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 @MouseLock.started += instance.OnMouseLock;
                 @MouseLock.performed += instance.OnMouseLock;
                 @MouseLock.canceled += instance.OnMouseLock;
-                @Sprint.started += instance.OnSprint;
-                @Sprint.performed += instance.OnSprint;
-                @Sprint.canceled += instance.OnSprint;
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
@@ -447,15 +457,78 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         }
     }
     public DeafultMovementActions @DeafultMovement => new DeafultMovementActions(this);
+
+    // Commands
+    private readonly InputActionMap m_Commands;
+    private ICommandsActions m_CommandsActionsCallbackInterface;
+    private readonly InputAction m_Commands_TimeSwitch;
+    private readonly InputAction m_Commands_SkipWave;
+    private readonly InputAction m_Commands_Damage;
+    private readonly InputAction m_Commands_AimBot;
+    public struct CommandsActions
+    {
+        private @PlayerControlls m_Wrapper;
+        public CommandsActions(@PlayerControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TimeSwitch => m_Wrapper.m_Commands_TimeSwitch;
+        public InputAction @SkipWave => m_Wrapper.m_Commands_SkipWave;
+        public InputAction @Damage => m_Wrapper.m_Commands_Damage;
+        public InputAction @AimBot => m_Wrapper.m_Commands_AimBot;
+        public InputActionMap Get() { return m_Wrapper.m_Commands; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CommandsActions set) { return set.Get(); }
+        public void SetCallbacks(ICommandsActions instance)
+        {
+            if (m_Wrapper.m_CommandsActionsCallbackInterface != null)
+            {
+                @TimeSwitch.started -= m_Wrapper.m_CommandsActionsCallbackInterface.OnTimeSwitch;
+                @TimeSwitch.performed -= m_Wrapper.m_CommandsActionsCallbackInterface.OnTimeSwitch;
+                @TimeSwitch.canceled -= m_Wrapper.m_CommandsActionsCallbackInterface.OnTimeSwitch;
+                @SkipWave.started -= m_Wrapper.m_CommandsActionsCallbackInterface.OnSkipWave;
+                @SkipWave.performed -= m_Wrapper.m_CommandsActionsCallbackInterface.OnSkipWave;
+                @SkipWave.canceled -= m_Wrapper.m_CommandsActionsCallbackInterface.OnSkipWave;
+                @Damage.started -= m_Wrapper.m_CommandsActionsCallbackInterface.OnDamage;
+                @Damage.performed -= m_Wrapper.m_CommandsActionsCallbackInterface.OnDamage;
+                @Damage.canceled -= m_Wrapper.m_CommandsActionsCallbackInterface.OnDamage;
+                @AimBot.started -= m_Wrapper.m_CommandsActionsCallbackInterface.OnAimBot;
+                @AimBot.performed -= m_Wrapper.m_CommandsActionsCallbackInterface.OnAimBot;
+                @AimBot.canceled -= m_Wrapper.m_CommandsActionsCallbackInterface.OnAimBot;
+            }
+            m_Wrapper.m_CommandsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @TimeSwitch.started += instance.OnTimeSwitch;
+                @TimeSwitch.performed += instance.OnTimeSwitch;
+                @TimeSwitch.canceled += instance.OnTimeSwitch;
+                @SkipWave.started += instance.OnSkipWave;
+                @SkipWave.performed += instance.OnSkipWave;
+                @SkipWave.canceled += instance.OnSkipWave;
+                @Damage.started += instance.OnDamage;
+                @Damage.performed += instance.OnDamage;
+                @Damage.canceled += instance.OnDamage;
+                @AimBot.started += instance.OnAimBot;
+                @AimBot.performed += instance.OnAimBot;
+                @AimBot.canceled += instance.OnAimBot;
+            }
+        }
+    }
+    public CommandsActions @Commands => new CommandsActions(this);
     public interface IDeafultMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnMouseLock(InputAction.CallbackContext context);
-        void OnSprint(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
         void OnEsc(InputAction.CallbackContext context);
+    }
+    public interface ICommandsActions
+    {
+        void OnTimeSwitch(InputAction.CallbackContext context);
+        void OnSkipWave(InputAction.CallbackContext context);
+        void OnDamage(InputAction.CallbackContext context);
+        void OnAimBot(InputAction.CallbackContext context);
     }
 }

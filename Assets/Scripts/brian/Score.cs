@@ -5,11 +5,23 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public enum Mode
+    {
+        WaveCrabs,
+        WaveHome,
+        OneShot
+    }
+
+    public Mode _mode;
+
     public TextMeshProUGUI _topTimed, _topShots;
 
     public void OnEnable()
     {
-        _topTimed.text = PlayerPrefs.GetString("Time");
-        _topShots.text = PlayerPrefs.GetString("Shots");
+        if(_mode == Mode.WaveCrabs)
+        {
+            _topTimed.text = PlayerPrefs.GetString("Time");
+            _topShots.text = PlayerPrefs.GetString("Shots");
+        }
     }
 }

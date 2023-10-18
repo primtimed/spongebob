@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprint",
-                    "type": "Button",
-                    "id": "a658003f-1ca2-4087-bfe2-28d26ed45660",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Shoot",
                     "type": "Button",
                     "id": "2658aaab-ac71-472d-9a21-21a44a725fc8",
@@ -136,28 +127,6 @@
                 },
                 {
                     "name": "",
-                    "id": "fe975137-980f-4922-91d1-3b10e688d45d",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b7587a9c-11c2-4d49-a477-b41c7443278e",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "80f96fe2-e217-488f-bb81-fedfe7d40fd4",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -175,50 +144,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Mouse Lock",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cf365fc6-6c7e-4c9d-b795-be48143ad80d",
-                    "path": "<Gamepad>/select",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mouse Lock",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6e35d0f1-17f9-41f9-bb1a-7e93ee8f36fa",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9d6a65d2-7164-493d-ab0e-6cb6c5eb49e5",
-                    "path": "<Gamepad>/leftStickPress",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6930afe9-2c78-441f-8c05-9567581afb0b",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -263,6 +188,94 @@
                     "processors": "",
                     "groups": "",
                     "action": "Esc",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Commands",
+            "id": "993879c3-ecca-4683-9cbc-70fc8d8e309e",
+            "actions": [
+                {
+                    "name": "TimeSwitch",
+                    "type": "Button",
+                    "id": "d1b225aa-e0c9-430e-ac94-afd759e63afa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SkipWave",
+                    "type": "Button",
+                    "id": "c1b49f1f-4084-4394-8f8e-4e4a3f18efad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Damage",
+                    "type": "Button",
+                    "id": "7ed09bb2-160d-492c-b2cd-3fdf57cdaebe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AimBot",
+                    "type": "Button",
+                    "id": "bdfb3297-919b-4ceb-89ce-c8f94768b7ca",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "47b42c65-20c1-4d5b-9f7a-8e5d7b5333bd",
+                    "path": "<Keyboard>/f10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TimeSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb155c5c-fa68-4173-837b-cfe2ac92623a",
+                    "path": "<Keyboard>/f11",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SkipWave",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "653a9a1b-835e-42bd-8a03-e5d57c13667a",
+                    "path": "<Keyboard>/f12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Damage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a034ecac-cd66-44d9-b2bc-196ea16e00e5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimBot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

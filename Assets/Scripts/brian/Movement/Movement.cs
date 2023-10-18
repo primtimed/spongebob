@@ -71,10 +71,10 @@ public class Movement : MonoBehaviour
     {
         _rotateV2 = _look.ReadValue<Vector2>();
 
-        _x += _rotateV2.x;
         _y -= _rotateV2.y;
+        _x += _rotateV2.x;
 
-        _y = Mathf.Clamp(_y, -85, 85);
+        _y = Mathf.Clamp(_y, -300, 300);
 
         transform.localRotation = quaternion.Euler(0, _x * _sens, 0);
         _back._cam.transform.localRotation = quaternion.Euler(_y * _sens, 0, 0);

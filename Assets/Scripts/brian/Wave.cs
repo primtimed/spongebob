@@ -20,7 +20,7 @@ public class Wave : MonoBehaviour
 
     public void Spawn()
     {
-        if(_wave <= _maxWave)
+        if(_wave < _maxWave)
         {
             Plankton();
         }

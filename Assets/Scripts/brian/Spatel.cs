@@ -12,16 +12,16 @@ public class Spatel : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
 
-        _rb.AddForce(transform.forward * 50, ForceMode.Force);
+        _rb.AddForce(transform.forward * 125, ForceMode.Force);
     }
 
     private void Update()
     {
-        transform.Rotate(3, 0, 0);
+        transform.Rotate(10, 0, 0);
 
         _timer += Time.deltaTime;
 
-        if(_timer > 3)
+        if(_timer > 10)
         {
             Destroy(gameObject);
         }
@@ -32,6 +32,7 @@ public class Spatel : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("hit");
+            other.GetComponent<PlayerStats>().TakeDamage(1);
         }
 
         Destroy(gameObject);

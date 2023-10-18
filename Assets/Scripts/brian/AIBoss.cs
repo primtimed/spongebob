@@ -22,7 +22,17 @@ public class AIBoss : MonoBehaviour
 
         _index = Random.Range(0, _table.Length);
         transform.position = _table[_index].transform.position;
+        OnEnable();
+    }
+
+    private void OnEnable()
+    {
         StartCoroutine(NewLocation());
+    }
+
+    public void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     void Update()
@@ -36,13 +46,13 @@ public class AIBoss : MonoBehaviour
         }
     }
 
-    IEnumerator NewLocation()
+    public IEnumerator NewLocation()
     {
         Debug.Log("new");
         Instantiate(_weapon, _aim.transform.position, transform.rotation);
         _index = Random.Range(0, _table.Length);
         transform.position = _table[_index].transform.position;
-        yield return new WaitForSecondsRealtime(Random.Range(1,3));
+        yield return new WaitForSeconds(Random.Range(1,3));
         StartCoroutine(NewLocation());
     }
 }
