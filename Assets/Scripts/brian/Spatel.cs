@@ -7,6 +7,7 @@ public class Spatel : MonoBehaviour
     Rigidbody _rb;
 
     float _timer;
+    public float _rotateSpeed;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class Spatel : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(10, 0, 0);
+        transform.Rotate(_rotateSpeed, 0, 0);
 
         _timer += Time.deltaTime;
 

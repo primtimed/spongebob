@@ -23,5 +23,16 @@ public class Score : MonoBehaviour
             _topTimed.text = PlayerPrefs.GetString("Time");
             _topShots.text = PlayerPrefs.GetString("Shots");
         }
+
+        else if (_mode == Mode.WaveHome)
+        {
+            _topTimed.text = PlayerPrefs.GetString("Time_spons");
+            _topShots.text = PlayerPrefs.GetString("Shots_spons");
+        }
+
+        else if (_mode == Mode.OneShot)
+        {
+            _topTimed.text = PlayerPrefs.GetString("Time_OneShot");
+        }
     }
 }

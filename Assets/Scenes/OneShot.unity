@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _game: 1
   _settings: {fileID: 793507497}
-  _lost: {fileID: 0}
+  _lost: {fileID: 102518606}
   _victory: {fileID: 240944889}
   _lostT: {fileID: 102518606}
   _speed: {fileID: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9f484896b6004498f56a92de71d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mode: 1
+  _mode: 2
 --- !u!1 &102518606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb6e136d7035084d879b5b97fc645f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
+  _health: 1
   _ui: {fileID: 82320807}
   _icons:
   - {fileID: 1039081071}
@@ -1525,7 +1525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -128.00012, y: -497}
+  m_AnchoredPosition: {x: -219, y: -497}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &294799458

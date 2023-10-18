@@ -78,11 +78,29 @@ public class UI : MonoBehaviour
 
     public void StatsReste()
     {
-        PlayerPrefs.SetFloat("BackTime", 0);
-        PlayerPrefs.SetString("Time", null);
+        if (GameObject.Find("GameModes").GetComponent<ScoreSwitch>()._dropDown.value == 0)
+        {
+            PlayerPrefs.SetFloat("BackTime", 0);
+            PlayerPrefs.SetString("Time", null);
 
-        PlayerPrefs.SetInt("BackShots", 0);
-        PlayerPrefs.SetString("Shots", null);
+            PlayerPrefs.SetInt("BackShots", 0);
+            PlayerPrefs.SetString("Shots", null);
+        }
+
+        else if (GameObject.Find("GameModes").GetComponent<ScoreSwitch>()._dropDown.value == 1)
+        {
+            PlayerPrefs.SetFloat("BackTime_spons", 0);
+            PlayerPrefs.SetString("Time_spons", null);
+
+            PlayerPrefs.SetInt("BackShots_spons", 0);
+            PlayerPrefs.SetString("Shots_spons", null);
+        }
+
+        else if (GameObject.Find("GameModes").GetComponent<ScoreSwitch>()._dropDown.value == 2)
+        {
+            PlayerPrefs.SetFloat("BackTime_OneShot", 0);
+            PlayerPrefs.SetString("Time_OneShot", null);
+        }
     }
 
     public void Lost()
