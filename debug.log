@@ -25,3 +25,19 @@
 [1016/125125.389:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
 [1016/132419.866:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
 [1018/125702.137:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1019/111713.874:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1019/124603.225:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1020/110622.915:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1025/222447.144:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1029/120445.146:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1029/120445.148:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1029/120445.160:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1029/120446.123:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1029/120446.186:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1029/120446.200:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[1103/102141.991:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../LOCK: File currently in use. (ChromeMethodBFE: 15::LockFile::2)
+[1103/102340.305:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1108/133212.336:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1109/103847.458:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
+[1109/152545.172:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../LOCK: File currently in use. (ChromeMethodBFE: 15::LockFile::2)
+[1109/152743.397:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 

@@ -89,6 +89,24 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Weapon1"",
+                    ""type"": ""Button"",
+                    ""id"": ""70f20ed2-ddfb-417e-9572-91f818c0608e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Weapon2"",
+                    ""type"": ""Button"",
+                    ""id"": ""3aca4f6f-3770-4f77-a26b-19ac8cf6185a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -212,6 +230,28 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""action"": ""Esc"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eda40bf-ce19-4e54-9c5d-9f2aabedfb20"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Weapon1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddcf0d5f-2e52-43bc-a342-5409fe76772c"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Weapon2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -315,6 +355,8 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         m_DeafultMovement_Shoot = m_DeafultMovement.FindAction("Shoot", throwIfNotFound: true);
         m_DeafultMovement_Reload = m_DeafultMovement.FindAction("Reload", throwIfNotFound: true);
         m_DeafultMovement_Esc = m_DeafultMovement.FindAction("Esc", throwIfNotFound: true);
+        m_DeafultMovement_Weapon1 = m_DeafultMovement.FindAction("Weapon1", throwIfNotFound: true);
+        m_DeafultMovement_Weapon2 = m_DeafultMovement.FindAction("Weapon2", throwIfNotFound: true);
         // Commands
         m_Commands = asset.FindActionMap("Commands", throwIfNotFound: true);
         m_Commands_TimeSwitch = m_Commands.FindAction("TimeSwitch", throwIfNotFound: true);
@@ -387,6 +429,8 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
     private readonly InputAction m_DeafultMovement_Shoot;
     private readonly InputAction m_DeafultMovement_Reload;
     private readonly InputAction m_DeafultMovement_Esc;
+    private readonly InputAction m_DeafultMovement_Weapon1;
+    private readonly InputAction m_DeafultMovement_Weapon2;
     public struct DeafultMovementActions
     {
         private @PlayerControlls m_Wrapper;
@@ -398,6 +442,8 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_DeafultMovement_Shoot;
         public InputAction @Reload => m_Wrapper.m_DeafultMovement_Reload;
         public InputAction @Esc => m_Wrapper.m_DeafultMovement_Esc;
+        public InputAction @Weapon1 => m_Wrapper.m_DeafultMovement_Weapon1;
+        public InputAction @Weapon2 => m_Wrapper.m_DeafultMovement_Weapon2;
         public InputActionMap Get() { return m_Wrapper.m_DeafultMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -428,6 +474,12 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 @Esc.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnEsc;
                 @Esc.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnEsc;
                 @Esc.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnEsc;
+                @Weapon1.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon1;
+                @Weapon1.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon1;
+                @Weapon1.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon1;
+                @Weapon2.started -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon2;
+                @Weapon2.performed -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon2;
+                @Weapon2.canceled -= m_Wrapper.m_DeafultMovementActionsCallbackInterface.OnWeapon2;
             }
             m_Wrapper.m_DeafultMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -453,6 +505,12 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 @Esc.started += instance.OnEsc;
                 @Esc.performed += instance.OnEsc;
                 @Esc.canceled += instance.OnEsc;
+                @Weapon1.started += instance.OnWeapon1;
+                @Weapon1.performed += instance.OnWeapon1;
+                @Weapon1.canceled += instance.OnWeapon1;
+                @Weapon2.started += instance.OnWeapon2;
+                @Weapon2.performed += instance.OnWeapon2;
+                @Weapon2.canceled += instance.OnWeapon2;
             }
         }
     }
@@ -523,6 +581,8 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
         void OnEsc(InputAction.CallbackContext context);
+        void OnWeapon1(InputAction.CallbackContext context);
+        void OnWeapon2(InputAction.CallbackContext context);
     }
     public interface ICommandsActions
     {

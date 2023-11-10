@@ -38,6 +38,8 @@ public class BaseGun : MonoBehaviour
     private Timer _timer;
 
     private GameMode _gameMode;
+
+    public Animator _weapon, _arms;
     private void Awake()
     {
         extra = new Extra();
@@ -75,7 +77,7 @@ public class BaseGun : MonoBehaviour
 
 
 
-        if (transform.GetComponent<Shotgun>().enabled)
+        if (transform.GetComponent<Shotgun>() != null)
         {
             extra.bloom = extra.cam.transform.position + extra.cam.transform.forward * 100;
             extra.bloom += Random.Range(-bloomRange, bloomRange) * extra.cam.transform.up;
@@ -96,7 +98,7 @@ public class BaseGun : MonoBehaviour
 
             if (hit.transform.tag == "Enemy")
             {
-                hit.transform.GetComponent<AI>()._health -= damage;
+                hit.transform.GetComponent<AI>().TakeDamage(damage);
                 Hit();
             }
 
@@ -104,6 +106,11 @@ public class BaseGun : MonoBehaviour
             {
                 hit.transform.GetComponent<AIBoss>()._health -= damage;
                 Hit();
+            }
+
+            if (hit.transform.tag == "Jelly")
+            {
+                hit.transform.GetComponent<JellyfishStats>().TakeDamage(damage);
             }
         }
     }
@@ -127,6 +134,10 @@ public class BaseGun : MonoBehaviour
         }
 
         extra.reload = true;
+
+        _weapon.Play(0);
+        _arms.Play(0);
+
         await Task.Delay((int) reloadTime);
 
         ammoCount = extra.startAmmo;

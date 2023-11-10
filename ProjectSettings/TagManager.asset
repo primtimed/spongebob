@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - BossPoint
   - Boss
+  - Jelly
   layers:
   - Default
   - TransparentFX

@@ -165,8 +165,8 @@ public class CFX_Demo_New : MonoBehaviour
 			particles.SetActiveRecursively(true);
 		#else
 			particles.SetActive(true);
-//			for(int i = 0; i < particles.transform.childCount; i++)
-//				particles.transform.GetChild(i).gameObject.SetActive(true);
+//			for(int i = 0; i < particles._transform.childCount; i++)
+//				particles._transform.GetChild(i).gameObject.SetActive(true);
 		#endif
 		
 		ParticleSystem ps = particles.GetComponent<ParticleSystem>();

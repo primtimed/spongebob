@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         Move();
-        Rotation();
+        Rotation(_look.ReadValue<Vector2>());
     }
 
     public void Move()
@@ -67,16 +67,17 @@ public class Movement : MonoBehaviour
         transform.Translate(new Vector3(_moveV2.x, 0, _moveV2.y) * (_moveSpeed * Time.deltaTime));
     }
 
-    public void Rotation()
+    public void Rotation(Vector2 _rotateV2)
     {
-        _rotateV2 = _look.ReadValue<Vector2>();
+        float _xB = _rotateV2.x * _sens;
+        float _yB = _rotateV2.y * _sens;
 
-        _y -= _rotateV2.y;
-        _x += _rotateV2.x;
+        _x += _xB;
+        _y -= _yB;
 
-        _y = Mathf.Clamp(_y, -300, 300);
+        _y = Mathf.Clamp(_y, -85, 85);
 
-        transform.localRotation = quaternion.Euler(0, _x * _sens, 0);
-        _back._cam.transform.localRotation = quaternion.Euler(_y * _sens, 0, 0);
+        transform.localRotation = quaternion.Euler(0, _x , 0);
+        _back._cam.transform.localRotation = quaternion.Euler(_y, 0, 0);
     }
 }

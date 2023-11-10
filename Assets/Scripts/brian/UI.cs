@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
     private PlayerControlls _playerControlls;
 
     public bool _game;
-    public GameObject _settings;
+    public GameObject _settings, _weaponholder;
 
     public GameObject _lost, _victory, _lostT;
 
@@ -208,5 +208,10 @@ public class UI : MonoBehaviour
                 Screen.SetResolution(3840, 2160, false);
             }
         }
+    }
+
+    public void EnnebleWeapons()
+    {
+        _weaponholder.GetComponentInChildren<Shoot>().enabled = true;
     }
 }

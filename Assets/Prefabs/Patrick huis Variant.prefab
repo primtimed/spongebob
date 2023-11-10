@@ -80,7 +80,27 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c14ee31c9060e14c88e47b1c92ac6a8,
         type: 3}
       propertyPath: m_Name
-      value: Patrick huis
+      value: Patrick huis Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c14ee31c9060e14c88e47b1c92ac6a8, type: 3}
+--- !u!1 &839083472800613358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c14ee31c9060e14c88e47b1c92ac6a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 532669578902486719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5641779029814280757
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839083472800613358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2
+  m_Height: 1.3417722
+  m_Direction: 1
+  m_Center: {x: -0.003336758, y: 0.01, z: 0.0022948685}

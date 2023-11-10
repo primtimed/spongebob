@@ -8,12 +8,13 @@ public class Spatel : MonoBehaviour
 
     float _timer;
     public float _rotateSpeed;
+    public float _speed;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
 
-        _rb.AddForce(transform.forward * 125, ForceMode.Force);
+        _rb.AddForce(transform.forward * _speed, ForceMode.Force);
     }
 
     private void Update()
@@ -36,6 +37,9 @@ public class Spatel : MonoBehaviour
             other.GetComponent<PlayerStats>().TakeDamage(1);
         }
 
-        Destroy(gameObject);
+        if(other.tag != "Jelly")
+        {
+            Destroy(gameObject);
+        }
     }
 }

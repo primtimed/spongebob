@@ -10,8 +10,11 @@ EditorBuildSettings:
     guid: a89674a7b75d59b49bb7b21db1d66785
   - enabled: 1
     path: Assets/Scenes/Wave.unity
-    guid: fe706d5f65771eb4b805be62675a1111
+    guid: 3e7de9d8716c25f47825b725a42f31c7
   - enabled: 1
     path: Assets/Scenes/OneShot.unity
     guid: 7c8f21c3cb28ffd40a007a181e9a13e5
+  - enabled: 1
+    path: Assets/Scenes/Spongebob.unity
+    guid: 4d4855ad1e0d9754c91c7847133e8a25
   m_configObjects: {}
